@@ -1,6 +1,7 @@
 package com.feedthebeast.modjam;
 
 import com.feedthebeast.modjam.block.ModBlocks;
+import com.feedthebeast.modjam.entity.ModEntities;
 import com.feedthebeast.modjam.item.ModItems;
 import com.feedthebeast.modjam.util.Config;
 import com.feedthebeast.modjam.util.Reference;
@@ -18,6 +19,7 @@ public class FeedTheTrain {
 	public static FeedTheTrain INSTANCE;
 	ModBlocks blocks;
 	ModItems items;
+	ModEntities entities;
 	
 	public Config config;
 	
@@ -28,10 +30,13 @@ public class FeedTheTrain {
 		
 		blocks = new ModBlocks();
 		items = new ModItems();
+		entities = new ModEntities();
 	}
 	
 	@EventHandler
 	public void init(FMLInitializationEvent event) {
 		
+//		EntityRegistry.registerModEntity(entityClass, entityName, id, mod, trackingRange, updateFrequency, sendsVelocityUpdates);
+//		entities.registerEntityEgg(entity, primaryColor, secondaryColor);
 	}
 }

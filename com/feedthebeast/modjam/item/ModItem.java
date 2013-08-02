@@ -6,13 +6,13 @@ import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
 public class ModItem extends Item {
-	public ModItem(int par) {
-		super(par);
+	public ModItem(int id) {
+		super(id);
 	}
 	
 	@Override
 	@SideOnly(Side.CLIENT)
-	public void registerIcons(IconRegister parIconRegister) {
+	public void registerIcons(IconRegister iconRegister) {
 //		itemIcon = 
 	}
 }
