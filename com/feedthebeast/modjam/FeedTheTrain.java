@@ -22,7 +22,7 @@ public class FeedTheTrain {
 	@Instance
 	public static FeedTheTrain INSTANCE;
 	
-	@SidedProxy(clientSide = "com.feedthebeast.modjam.proxy.ClientProxy")
+	@SidedProxy(clientSide = "com.feedthebeast.modjam.proxy.ClientProxy", serverSide = "com.feedthebeast.modjam.proxy.CommonProxy")
 	public static CommonProxy proxy;
 	ModBlocks blocks;
 	ModItems items;
