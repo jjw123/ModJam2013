@@ -12,8 +12,8 @@ public class TestEntity extends EntityLiving {
 	public TestEntity(World par1World) {
 		super(par1World);
 		this.setSize(1.4F, 1.6F);
-		this.tasks.addTask(0, new EntityAISwimming(this));
-		this.tasks.addTask(1, new EntityAIWatchClosest(this, EntityPlayer.class, 6.0F));
+//		this.tasks.addTask(0, new EntityAISwimming(this));
+//		this.tasks.addTask(1, new EntityAIWatchClosest(this, EntityPlayer.class, 6.0F));
 	}
 
 	public int getMaxHealth() {
