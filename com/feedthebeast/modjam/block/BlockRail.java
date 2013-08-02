@@ -1,10 +1,13 @@
 package com.feedthebeast.modjam.block;
 
+import com.feedthebeast.modjam.entity.TestEntity;
+
 import cpw.mods.fml.common.FMLLog;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
+import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.util.AxisAlignedBB;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
@@ -19,6 +22,16 @@ public class BlockRail extends ModBlock {
     public boolean isOpaqueCube() {
         return false;
     }
+    
+    @Override
+	public boolean onBlockActivated(World world, int x, int y, int z, EntityPlayer par5EntityPlayer, int par6, float par7, float par8, float par9) {
+    	TestEntity e = new TestEntity(world);
+		e.setPositionAndUpdate(x + 1.5F, y + 2, z - 8 + 1.5F);
+		if(!world.isRemote) {
+			world.spawnEntityInWorld(e);
+		}
+    	return true;
+	}
 
     @Override
     public void setBlockBoundsBasedOnState(IBlockAccess par1IBlockAccess, int par2, int par3, int par4) {
@@ -35,22 +48,22 @@ public class BlockRail extends ModBlock {
     	case 1:
     		//Train
     		//Right hand side, Facing X
-    		this.setBlockBounds(1, 0, 0, 16, 16, 3);
+    		this.setBlockBounds(0.0625F, 0, 0, 1, 0.1875F, 1);
     		break;
     	case 2:
     		//Train
     		//Right hand side, facing Z
-    		this.setBlockBounds(0, 1, 0, 16, 16, 3);
+    		this.setBlockBounds(0, 0, 0.0625F, 1, 0.1875F, 1);
     		break;
     	case 3:
     		//Train
     		//Left hand side, Facing X
-    		this.setBlockBounds(0, 0, 0, 15, 16, 3);
+    		this.setBlockBounds(0, 0, 0, 0.9375F, 0.1875F, 1);
     		break;
     	case 4:
     		//Train
     		//Left hand side, Facing Z
-    		this.setBlockBounds(0, 0, 0, 16, 15, 3);
+    		this.setBlockBounds(0, 0, 0, 1, 0.1875F, 0.9375F);
     		break;
     	case 5:
     		//Coaster
