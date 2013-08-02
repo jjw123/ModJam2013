@@ -3,9 +3,15 @@ package com.feedthebeast.modjam.entity;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityEggInfo;
 import net.minecraft.entity.EntityList;
+import net.minecraft.world.World;
 
 public class ModEntities {
 	static int startEntityId = 400;
+	
+	TestEntity npc1;
+	
+	public ModEntities() {
+	}
 	
 	public static int getUniqueEntityId() {
 		do {
