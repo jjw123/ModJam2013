@@ -11,6 +11,6 @@ public class ClientProxy extends CommonProxy {
 	@Override
 	public void registerRenders() {
 		System.out.println("registering renders!");
-		RenderingRegistry.registerEntityRenderingHandler(TestEntity.class, new RenderTest(new ModelPig(), 0));
+		RenderingRegistry.registerEntityRenderingHandler(TestEntity.class, new RenderTest(new ModelPig(), 0.3F));
 	}
 }
