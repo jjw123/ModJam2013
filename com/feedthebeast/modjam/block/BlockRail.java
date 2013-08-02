@@ -24,13 +24,13 @@ public class BlockRail extends ModBlock {
     public void setBlockBoundsBasedOnState(IBlockAccess par1IBlockAccess, int par2, int par3, int par4) {
     	
     	System.out.println("is this even getting called?...");
-    	System.out.println("Yes, of course it is");
+    	System.out.println("Yes, of course it is ... " + par1IBlockAccess.getBlockMetadata(par2, par3, par4));
     	
     	switch(par1IBlockAccess.getBlockMetadata(par2, par3, par4)) {
     	case 0:
     		//Train
     		//Center/Turn
-    		this.setBlockBounds(0, 0, 0, 1, 1, 3/16);
+    		this.setBlockBounds(0, 0, 0, 1, 0.1875F, 1);
     		break;
     	case 1:
     		//Train
