@@ -44,7 +44,8 @@ public class FeedTheTrain {
 	
 	@EventHandler
 	public void init(FMLInitializationEvent event) {
+		EntityRegistry.registerModEntity(TestEntity.class, "TestEntity", 888, this, 80, 3, true);
+		entities.registerEntityEgg(TestEntity.class, "Test Entity", 0x0026FF, 0xFF0000);
 		proxy.registerRenders();
-		entities.registerEntity(TestEntity.class, "Test Entity", this, 0x0026FF, 0xFF0000);
 	}
 }

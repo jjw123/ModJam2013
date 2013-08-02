@@ -1,23 +1,34 @@
 package com.feedthebeast.modjam.proxy;
 
-import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.entity.Entity;
+import net.minecraft.server.MinecraftServer;
 import net.minecraft.world.World;
-import cpw.mods.fml.common.network.IGuiHandler;
+import net.minecraft.world.WorldServer;
+import cpw.mods.fml.common.FMLCommonHandler;
 
-public class CommonProxy implements IGuiHandler {
 
-	@Override
-	public Object getServerGuiElement(int ID, EntityPlayer player, World world, int x, int y, int z) {
+public class CommonProxy {
+	
+	public Entity getEntityByID(World worldObj, int id) {
+		if (worldObj instanceof WorldServer) {
+			return ((WorldServer)worldObj).getEntityByID(id);
+		}
 		return null;
 	}
-
-	@Override
-	public Object getClientGuiElement(int ID, EntityPlayer player, World world, int x, int y, int z) {
-		return null;
+	
+	public MinecraftServer getMCServer() {
+		return FMLCommonHandler.instance().getMinecraftServerInstance();
 	}
-
-	public void registerRenders() {
-		
+	
+	public void preinit()
+	{
 	}
-
+	
+	public void init()
+	{
+	}
+	
+	public void postinit()
+	{
+	}
 }
