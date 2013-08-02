@@ -23,6 +23,7 @@ public class ItemRail extends ModItem {
             
         	int i1 = MathHelper.floor_double((double)((entityPlayer.rotationYaw + 180.0F) * 4.0F / 360.0F) - 0.5D) & 3;
         	world.setBlock(par4, par5, par6, ModBlocks.rail.blockID, i1, 2);
+        	world.setBlockMetadataWithNotify(par4, par5, par6, 0, 2);
         	--itemStack.stackSize;
         	return true;
         } else {

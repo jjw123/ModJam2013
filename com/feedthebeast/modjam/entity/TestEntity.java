@@ -7,6 +7,7 @@ public class TestEntity extends EntityMob {
 
 	public TestEntity(World par1World) {
 		super(par1World);
+		
 	}
 
 	public int getMaxHealth() {

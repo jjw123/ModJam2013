@@ -25,7 +25,7 @@ public class BlockRail extends ModBlock {
     	case 0:
     		//Train
     		//Center/Turn
-    		this.setBlockBounds(0, 0, 0, 16, 16, 3);
+    		this.setBlockBounds(0, 0, 0, 1, 1, 3/16);
     	case 1:
     		//Train
     		//Right hand side, Facing X
