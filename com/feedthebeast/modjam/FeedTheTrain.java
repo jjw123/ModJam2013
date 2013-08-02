@@ -16,7 +16,7 @@ import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.registry.EntityRegistry;
 
-@Mod(modid = Reference.MOD_ID)
+@Mod(modid = Reference.MOD_ID, name = Reference.MOD_NAME, version = Reference.VERSION)
 public class FeedTheTrain {
 
 	@Instance
@@ -45,7 +45,6 @@ public class FeedTheTrain {
 	@EventHandler
 	public void init(FMLInitializationEvent event) {
 		proxy.registerRenders();
-		EntityRegistry.registerModEntity(TestEntity.class, "TestEntity", 888, this, 80, 3, true);
-		entities.registerEntityEgg(TestEntity.class, 0x0026FF, 0xFF0000);
+		entities.registerEntity(TestEntity.class, "Test Entity", this, 0x0026FF, 0xFF0000);
 	}
 }
