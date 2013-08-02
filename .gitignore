@@ -1,3 +1,11 @@
-/bin
-.*
-cmd.exe
+mcpmod.info
+Start.java
+forge_logo.png
+*.cfg
+*.properties
+net/
+paulscode/
+ibxm/
+cpw/
+*.
+*.lzma

@@ -1,6 +1,7 @@
 package com.feedthebeast.modjam.item;
 
 public class ModItems {
+	
 	public static void initItems() {
 		
 	}
@@ -8,6 +9,4 @@ public class ModItems {
 	public static void nameItems() {
 		
 	}
-	
-	
 }

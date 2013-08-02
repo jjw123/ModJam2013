@@ -1,5 +1,7 @@
 package com.feedthebeast.modjam;
 
+import com.feedthebeast.modjam.block.ModBlocks;
+import com.feedthebeast.modjam.item.ModItems;
 import com.feedthebeast.modjam.util.Config;
 import com.feedthebeast.modjam.util.Reference;
 
@@ -14,6 +16,8 @@ public class FeedTheTrain {
 
 	@Instance
 	public static FeedTheTrain INSTANCE;
+	ModBlocks blocks;
+	ModItems items;
 	
 	public Config config;
 	
@@ -21,6 +25,9 @@ public class FeedTheTrain {
 	public void preInit(FMLPreInitializationEvent event) {
 		config = new Config(event.getSuggestedConfigurationFile());
 		config.loadConfig();
+		
+		blocks = new ModBlocks();
+		items = new ModItems();
 	}
 	
 	@EventHandler
